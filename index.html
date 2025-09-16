@@ -1,38 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Bio Shield</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bio Shield - Eco-Friendly Insect Repellents</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* NAVIGATION BAR */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #0a1a23;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 2rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #8BC34A;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: url('images/hero-image.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero-content {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .hero a {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background: #8BC34A;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .hero a:hover {
+      background: #6fa231;
+    }
+
+    /* SECTION LAYOUT */
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0a1a23;
+    }
+
+    .box {
+      background: #fff;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    /* PRODUCTS */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .product {
+      background: #f4f9f4;
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .product h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+      color: #2e7d32;
+    }
+
+    .product p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .product .price {
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* QUOTES */
+    blockquote {
+      font-style: italic;
+      margin: 1rem 0;
+      text-align: center;
+    }
+
+    /* FAQ */
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+
+    .faq-question {
+      background: #e0f2f1;
+      padding: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 1rem;
+      border-left: 3px solid #8BC34A;
+      background: #f9f9f9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #0a1a23;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Bio Shield</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>Your trusted source for bio protection solutions.</p>
-        </section>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Learn more about our mission and products.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Get in touch with our team.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Bio Shield. All rights reserved.</p>
-    </footer>
+  <!-- HEADER -->
+  <header>
+    <img src="images/logo.png" alt="Bio Shield Logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Eco-Friendly Protection, Naturally</h1>
+      <a href="products.html">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section>
+    <h2>Our Products</h2>
+    <div class="box products">
+      <div class="product">
+        <h3>Natural Spray</h3>
+        <p>Powerful repellent made with plant-based oils.</p>
+        <p class="price">$12.99</p>
+      </div>
+      <div class="product">
+        <h3>Wearable Band</h3>
+        <p>Repels insects with long-lasting eco-friendly formula.</p>
+        <p class="price">$8.99</p>
+      </div>
+      <div class="product">
+        <h3>Family Pack</h3>
+        <p>A bundle designed for outdoor adventures.</p>
+        <p class="price">$29.99</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section>
+    <h2>Benefits</h2>
+    <div class="box">
+      <ul>
+        <li>Safe for kids and pets</li>
+        <li>Made with natural ingredients</li>
+        <li>Environmentally sustainable packaging</li>
+        <li>Long-lasting protection</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- QUOTES -->
+  <section>
+    <h2>What Our Customers Say</h2>
+    <div class="box">
+      <blockquote>“Finally, a repellent that works and smells great!” – Emily R.</blockquote>
+      <blockquote>“My kids love the bands, and no more bites!” – James P.</blockquote>
+      <blockquote>“Eco-friendly and effective — win-win.” – Sarah L.</blockquote>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <div class="box">
+      <div class="faq-item">
+        <div class="faq-question">Is Bio Shield safe for children?</div>
+        <div class="faq-answer">Yes, all products are made with natural, safe ingredients suitable for kids.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How long does the protection last?</div>
+        <div class="faq-answer">Our sprays last up to 6 hours, while bands last up to 3 weeks.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do you ship internationally?</div>
+        <div class="faq-answer">Yes, we ship worldwide with eco-friendly packaging.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Bio Shield. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // FAQ toggle
+    document.querySelectorAll(".faq-question").forEach(q => {
+      q.addEventListener("click", () => {
+        const answer = q.nextElementSibling;
+        answer.style.display = answer.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
 </body>
 </html>
