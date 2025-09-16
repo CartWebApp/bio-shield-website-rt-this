@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bio Shield - Products</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+
+    /* NAVIGATION BAR */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #0a1a23;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 2rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #8BC34A;
+    }
+
+    /* HERO IMAGE (HALF HEIGHT) */
+    .hero-small {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 5;
+      background: url('images/products-hero.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero-content {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1.5rem 2rem;
+      border-radius: 10px;
+    }
+
+    .hero-small h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    /* PAGE LAYOUT */
+    main {
+      display: flex;
+      max-width: 1400px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      gap: 2rem;
+    }
+
+    /* FILTERS SIDEBAR */
+    aside {
+      flex: 1;
+      max-width: 250px;
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      height: fit-content;
+    }
+
+    aside h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: #0a1a23;
+    }
+
+    .filter-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .filter-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .filter-group input {
+      margin-right: 0.5rem;
+    }
+
+    /* PRODUCTS GRID */
+    .products-section {
+      flex: 3;
+    }
+
+    .sort-bar {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 1.5rem;
+    }
+
+    .sort-bar select {
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 0.9rem;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 1rem;
+    }
+
+    .product-info h3 {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+      color: #2e7d32;
+    }
+
+    .product-info p {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      font-weight: 700;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #0a1a23;
+      color: #fff;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <img src="images/logo.png" alt="Bio Shield Logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SMALL -->
+  <section class="hero-small">
+    <div class="hero-content">
+      <h1>Explore Our Eco-Friendly Products</h1>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- FILTERS -->
+    <aside>
+      <h2>Filter By</h2>
+      <div class="filter-group">
+        <label>Insect Type</label>
+        <div><input type="checkbox"> Mosquito Repellents</div>
+        <div><input type="checkbox"> Tick Repellents</div>
+        <div><input type="checkbox"> General Bug Repellents</div>
+      </div>
+      <div class="filter-group">
+        <label>Product Type</label>
+        <div><input type="checkbox"> Sprays</div>
+        <div><input type="checkbox"> Wearable Bands</div>
+        <div><input type="checkbox"> Bug Nets</div>
+        <div><input type="checkbox"> Jackets</div>
+      </div>
+    </aside>
+
+    <!-- PRODUCTS LIST -->
+    <section class="products-section">
+      <div class="sort-bar">
+        <label for="sort">Sort by: </label>
+        <select id="sort">
+          <option value="featured">Featured</option>
+          <option value="alpha">Alphabetical</option>
+          <option value="priceLow">Price: Low to High</option>
+          <option value="priceHigh">Price: High to Low</option>
+        </select>
+      </div>
+
+      <div class="products-grid">
+        <div class="product-card">
+          <img src="images/product1.jpg" alt="Eco Mosquito Spray">
+          <div class="product-info">
+            <h3>Eco Mosquito Spray</h3>
+            <p>Plant-based spray that keeps mosquitoes away.</p>
+            <p class="price">$12.99</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="images/product2.jpg" alt="Tick Shield Lotion">
+          <div class="product-info">
+            <h3>Tick Shield Lotion</h3>
+            <p>Eco-friendly lotion that protects against ticks.</p>
+            <p class="price">$14.99</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="images/product3.jpg" alt="Wearable Band">
+          <div class="product-info">
+            <h3>Wearable Band</h3>
+            <p>Comfortable band infused with natural repellents.</p>
+            <p class="price">$8.99</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="images/product4.jpg" alt="Eco Bug Net">
+          <div class="product-info">
+            <h3>Eco Bug Net</h3>
+            <p>Durable netting made from sustainable materials.</p>
+            <p class="price">$19.99</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="images/product5.jpg" alt="Bug Jacket">
+          <div class="product-info">
+            <h3>Bug Jacket</h3>
+            <p>Protective eco-friendly fabric for outdoor adventures.</p>
+            <p class="price">$39.99</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Bio Shield. All rights reserved.</p>
+  </footer>
+</body>
+</html>
