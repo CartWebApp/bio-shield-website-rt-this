@@ -1,304 +1,114 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>About Us — Bio Shield</title>
-
-  <!-- Google font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Bio Shield</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#071b20;          /* deep teal/dark background (from logo) */
-      --panel:#0f2a30;       /* card background */
-      --green:#8fd73b;       /* bright logo green */
-      --muted:#9fb6b7;       /* muted accent */
-      --white:#ffffff;
-      --radius:14px;
-      --maxWidth:1100px;
-      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
     }
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      background:linear-gradient(180deg,var(--bg) 0%, #07262b 100%);
-      color:var(--white);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.5;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:36px 18px;
+    /* Navbar */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #1a3c34;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    .container{
-      width:100%;
-      max-width:var(--maxWidth);
-      display:grid;
-      grid-template-columns: 380px 1fr;
-      gap:32px;
-      align-items:start;
+    .navbar img {
+      height: 40px;
     }
 
-    /* responsive */
-    @media (max-width:900px){
-      .container{grid-template-columns:1fr; padding:0}
+    .navbar nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
     }
 
-    /* Left column - brand panel */
-    .brand {
-      background:linear-gradient(180deg,var(--panel), rgba(255,255,255,0.02));
-      border-radius:var(--radius);
-      padding:28px;
-      box-shadow: 0 8px 30px rgba(3,8,10,0.6);
-      display:flex;
-      flex-direction:column;
-      gap:18px;
-      align-items:center;
-      text-align:center;
+    .navbar nav a:hover {
+      text-decoration: underline;
     }
 
-    .logo {
-      width:120px;
-      height:120px;
-      border-radius:18px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      background:rgba(255,255,255,0.02);
-      padding:10px;
+    /* About Section */
+    .about-container {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    .brand h1{
-      margin:0;
-      font-size:1.45rem;
-      letter-spacing:-0.02em;
-      display:flex;
-      gap:6px;
-      align-items:center;
-      justify-content:center;
-    }
-    .brand h1 .green{ color:var(--green); font-weight:700 }
-    .brand h1 .white{ color:var(--white); font-weight:600 }
-
-    .tagline{
-      color:var(--muted);
-      font-size:0.95rem;
-      margin-top:6px;
+    .about-container h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #1a3c34;
     }
 
-    .pill{
-      display:inline-block;
-      padding:8px 12px;
-      border-radius:999px;
-      background:rgba(143,215,59,0.12);
-      color:var(--green);
-      font-weight:600;
-      font-size:0.88rem;
+    .about-container p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
     }
 
-    /* Right column */
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:var(--radius);
-      padding:28px;
-      box-shadow: 0 8px 30px rgba(3,8,10,0.45);
-      color:var(--white);
-    }
-
-    .eyebrow{ font-size:0.85rem; color:var(--muted); letter-spacing:0.06em; text-transform:uppercase; margin-bottom:8px; }
-    h2{ margin:0 0 12px 0; font-size:1.6rem; }
-    p{ margin:0 0 14px 0; color:rgba(255,255,255,0.92); font-size:1rem; }
-
-    .highlight{
-      color:var(--green);
-      font-weight:700;
-    }
-
-    .features{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:14px;
-      margin-top:18px;
-    }
-
-    @media (max-width:700px){
-      .features{grid-template-columns:repeat(1,1fr)}
-    }
-
-    .feature{
-      background: rgba(255,255,255,0.02);
-      padding:12px;
-      border-radius:10px;
-      border: 1px solid rgba(255,255,255,0.03);
-      min-height:88px;
-    }
-    .feature h4{ margin:0 0 6px 0; font-size:1rem }
-    .feature p{ margin:0; color:var(--muted); font-size:0.92rem }
-
-    .cta-row{
-      display:flex;
-      gap:12px;
-      margin-top:20px;
-      align-items:center;
-    }
-
-    .btn{
-      background:var(--green);
-      color:#05201a;
-      border:none;
-      padding:12px 16px;
-      border-radius:10px;
-      font-weight:700;
-      cursor:pointer;
-      box-shadow: 0 6px 20px rgba(143,215,59,0.14);
-    }
-
-    .btn-ghost{
-      background:transparent;
-      color:var(--white);
-      border:1px solid rgba(255,255,255,0.06);
-      padding:10px 14px;
-      border-radius:10px;
-      font-weight:600;
-      cursor:pointer;
-    }
-
-    footer{
-      margin-top:20px;
-      color:var(--muted);
-      font-size:0.9rem;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
-
-    .quote{
-      margin-top:14px;
-      padding:12px 14px;
-      border-left:3px solid rgba(143,215,59,0.9);
-      background: rgba(143,215,59,0.03);
-      color:rgba(255,255,255,0.95);
-      border-radius:8px;
-    }
-
-    /* small helper for product images placeholders */
-    .product-thumb{
-      height:64px;
-      width:64px;
-      border-radius:10px;
-      background:linear-gradient(180deg,var(--panel), rgba(255,255,255,0.01));
-      display:flex; align-items:center; justify-content:center;
-      font-size:0.85rem; color:var(--muted);
-      border:1px solid rgba(255,255,255,0.03);
+    footer {
+      background-color: #1a3c34;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
-  <main class="container" role="main">
-    <!-- Left panel: brand + logo -->
-    <aside class="brand" aria-label="Bio Shield brand panel">
-      <div class="logo" aria-hidden="true">
-        <!-- Use the provided file name here. Change path if needed. -->
-        <img src="images/bio-shield-logo.png" alt="Bio Shield logo" style="max-width:100%; max-height:100%; display:block; object-fit:contain; border-radius:8px;">
-      </div>
+  <!-- Navbar -->
+  <header class="navbar">
+    <img src="images/logo.png" alt="Bio Shield Logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-      <h1><span class="green">Bio</span><span class="white"> Shield</span></h1>
-      <div class="tagline">Protection that cares — for people and planet.</div>
-
-      <div style="margin-top:8px;">
-        <span class="pill">Eco · Plant-based · Cruelty-free</span>
-      </div>
-
-      <div style="margin-top:14px; width:100%; display:flex; gap:12px; justify-content:center">
-        <button class="btn" onclick="document.getElementById('learn-more').scrollIntoView({behavior:'smooth'})">Learn More</button>
-        <button class="btn-ghost" onclick="alert('Contact sales at hello@bioshield.example')">Contact</button>
-      </div>
-
-      <footer style="width:100%; margin-top:18px">
-        <div style="font-size:0.82rem; color:var(--muted)">Founded: 20XX</div>
-        <div style="font-size:0.82rem; color:var(--muted)">Headquarters: Wherever green ideas grow</div>
-      </footer>
-    </aside>
-
-    <!-- Right panel: about script -->
-    <section class="card" id="learn-more" aria-labelledby="about-heading">
-      <div class="eyebrow">Our story</div>
-      <h2 id="about-heading">How Bio Shield began — and where we're headed</h2>
-
-      <!-- Script paragraphs provided by user -->
-      <p>
-        Bio Shield was founded on a simple yet powerful idea: that people shouldn’t have to choose between protecting themselves from insects and protecting the planet. The inspiration came when our founders noticed that most insect repellents on the market relied heavily on harsh chemicals, often posing risks to both human health and the environment. Driven by a passion for sustainability and wellness, they set out to develop a safer, eco-friendly alternative—one made with natural ingredients that would be as kind to the earth as it was effective against pests.
-      </p>
-
-      <p>
-        After months of research, testing, and refinement, Bio Shield introduced its first eco-friendly insect repellent. It quickly gained attention for its plant-based formula, which not only provided strong protection but also avoided the toxins found in traditional sprays. Families, outdoor enthusiasts, and environmentally conscious consumers embraced it, proving that eco-responsibility and performance could go hand in hand.
-      </p>
-
-      <p>
-        From that first breakthrough product, Bio Shield has continued to grow and innovate. The success of the original repellent paved the way for an expanded line of solutions—from household pest deterrents to skin-friendly sprays and pet-safe formulas. Today, Bio Shield remains committed to its mission of blending science, nature, and sustainability to create products that shield people—and the planet—from harm.
-      </p>
-
-      <div class="quote" aria-hidden="false">
-        “We wanted to show the world that choosing green doesn’t mean compromising protection. That idea changed everything.” — Co-founder, Bio Shield
-      </div>
-
-      <div class="features" aria-hidden="false" style="margin-top:18px">
-        <div class="feature">
-          <div style="display:flex;gap:12px;align-items:center">
-            <div class="product-thumb" aria-hidden="true">Repel<br>Original</div>
-            <div>
-              <h4>Repel — The first</h4>
-              <p>Our flagship, plant-powered insect repellent that started it all: effective, fast-drying, and safe for daily family use.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="feature">
-          <div style="display:flex;gap:12px;align-items:center">
-            <div class="product-thumb" aria-hidden="true">Home</div>
-            <div>
-              <h4>Home Defender</h4>
-              <p>Derived from the original formula but optimized for indoor use — gentle on surfaces and harsh on pests.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="feature">
-          <div style="display:flex;gap:12px;align-items:center">
-            <div class="product-thumb" aria-hidden="true">Pet</div>
-            <div>
-              <h4>Pet-Safe Spray</h4>
-              <p>Formulated specifically for fur and skin, giving pet parents peace of mind without toxic residues.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cta-row">
-        <button class="btn" onclick="window.location.href='#'">Shop the Line</button>
-        <button class="btn-ghost" onclick="window.location.href='#careers'">Join Our Team</button>
-      </div>
-
-      <footer style="margin-top:18px">
-        <div style="color:var(--muted)">Committed to continuous improvement — third-party tested, biodegradable, and responsibly packaged.</div>
-      </footer>
-    </section>
+  <!-- About Section -->
+  <main class="about-container">
+    <h1>About Us</h1>
+    <p>
+      Bio Shield began with a simple vision: to create insect repellents that protect people while protecting the planet. 
+      Concerned about the harsh chemicals used in traditional repellents, our founders set out to develop safe, effective 
+      solutions rooted in sustainability. What started as a small project to craft a single eco-friendly repellent has 
+      blossomed into a full line of products trusted by families and adventurers alike.
+    </p>
+    <p>
+      Our philosophy is guided by a respect for nature and the people who enjoy it. Every Bio Shield product is designed 
+      with natural, responsibly sourced ingredients and environmentally friendly manufacturing practices. From repellents 
+      for mosquitoes and ticks to protective gear like nets and jackets, we’ve built our catalog around both safety 
+      and sustainability.
+    </p>
+    <p>
+      Today, Bio Shield is more than a company—it’s a community of innovators, outdoor lovers, and eco-conscious customers. 
+      We remain committed to our founding principle: that no one should have to choose between personal protection and the 
+      health of our planet.
+    </p>
   </main>
 
-  <script>
-    // small accessible focus management for keyboard users when jumping to content
-    document.querySelectorAll('a, button').forEach(el=>{
-      el.addEventListener('keydown', (e)=>{
-        if(e.key === 'Enter' || e.key === ' '){
-          el.click();
-        }
-      });
-    });
-  </script>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Bio Shield. All rights reserved.</p>
+  </footer>
 </body>
 </html>

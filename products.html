@@ -114,6 +114,8 @@
       display: flex;
       justify-content: flex-end;
       margin-bottom: 1.5rem;
+      gap: 0.5rem;
+      align-items: center;
     }
 
     .sort-bar select {
@@ -180,7 +182,7 @@
 <body>
   <!-- HEADER -->
   <header>
-    <img src="images/logo.png" alt="Bio Shield Logo">
+    <img src="images/bio-shield-logo.png" alt="Bio Shield Logo">
     <nav>
       <a href="index.html">Home</a>
       <a href="products.html">Products</a>
@@ -203,23 +205,23 @@
       <h2>Filter By</h2>
       <div class="filter-group">
         <label>Insect Type</label>
-        <div><input type="checkbox"> Mosquito Repellents</div>
-        <div><input type="checkbox"> Tick Repellents</div>
-        <div><input type="checkbox"> General Bug Repellents</div>
+        <div><input type="checkbox" class="filter" value="mosquito"> Mosquito Repellents</div>
+        <div><input type="checkbox" class="filter" value="tick"> Tick Repellents</div>
+        <div><input type="checkbox" class="filter" value="general"> General Bug Repellents</div>
       </div>
       <div class="filter-group">
         <label>Product Type</label>
-        <div><input type="checkbox"> Sprays</div>
-        <div><input type="checkbox"> Wearable Bands</div>
-        <div><input type="checkbox"> Bug Nets</div>
-        <div><input type="checkbox"> Jackets</div>
+        <div><input type="checkbox" class="filter" value="spray"> Sprays</div>
+        <div><input type="checkbox" class="filter" value="band"> Wearable Bands</div>
+        <div><input type="checkbox" class="filter" value="net"> Bug Nets</div>
+        <div><input type="checkbox" class="filter" value="jacket"> Jackets</div>
       </div>
     </aside>
 
     <!-- PRODUCTS LIST -->
     <section class="products-section">
       <div class="sort-bar">
-        <label for="sort">Sort by: </label>
+        <label for="sort">Sort by:</label>
         <select id="sort">
           <option value="featured">Featured</option>
           <option value="alpha">Alphabetical</option>
@@ -228,17 +230,17 @@
         </select>
       </div>
 
-      <div class="products-grid">
-        <div class="product-card">
+      <div class="products-grid" id="productsGrid">
+        <div class="product-card" data-type="mosquito spray" data-price="12.99" data-name="Eco Mosquito Spray" data-featured="true">
           <img src="images/product1.jpg" alt="Eco Mosquito Spray">
           <div class="product-info">
             <h3>Eco Mosquito Spray</h3>
-            <p>Plant-based spray that keeps mosquitoes away.</p>
+            <p>Plant-based spray that keeps mosquitoes away naturally.</p>
             <p class="price">$12.99</p>
           </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-type="tick lotion" data-price="14.99" data-name="Tick Shield Lotion">
           <img src="images/product2.jpg" alt="Tick Shield Lotion">
           <div class="product-info">
             <h3>Tick Shield Lotion</h3>
@@ -247,7 +249,7 @@
           </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-type="general band" data-price="8.99" data-name="Wearable Band" data-featured="true">
           <img src="images/product3.jpg" alt="Wearable Band">
           <div class="product-info">
             <h3>Wearable Band</h3>
@@ -256,7 +258,7 @@
           </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-type="general net" data-price="19.99" data-name="Eco Bug Net">
           <img src="images/product4.jpg" alt="Eco Bug Net">
           <div class="product-info">
             <h3>Eco Bug Net</h3>
@@ -265,7 +267,7 @@
           </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-type="general jacket" data-price="39.99" data-name="Bug Jacket">
           <img src="images/product5.jpg" alt="Bug Jacket">
           <div class="product-info">
             <h3>Bug Jacket</h3>
@@ -281,5 +283,55 @@
   <footer>
     <p>&copy; 2025 Bio Shield. All rights reserved.</p>
   </footer>
+
+  <script>
+    const filters = document.querySelectorAll(".filter");
+    const productsGrid = document.getElementById("productsGrid");
+    const sortSelect = document.getElementById("sort");
+
+    function filterProducts() {
+      const activeFilters = Array.from(filters)
+        .filter(f => f.checked)
+        .map(f => f.value);
+
+      document.querySelectorAll(".product-card").forEach(card => {
+        const type = card.dataset.type;
+        if (activeFilters.length === 0 || activeFilters.some(f => type.includes(f))) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+
+    function sortProducts() {
+      const option = sortSelect.value;
+      const products = Array.from(productsGrid.children);
+
+      products.sort((a, b) => {
+        if (option === "alpha") {
+          return a.dataset.name.localeCompare(b.dataset.name);
+        }
+        if (option === "priceLow") {
+          return parseFloat(a.dataset.price) - parseFloat(b.dataset.price);
+        }
+        if (option === "priceHigh") {
+          return parseFloat(b.dataset.price) - parseFloat(a.dataset.price);
+        }
+        if (option === "featured") {
+          return (b.dataset.featured ? 1 : 0) - (a.dataset.featured ? 1 : 0);
+        }
+        return 0;
+      });
+
+      products.forEach(p => productsGrid.appendChild(p));
+    }
+
+    filters.forEach(f => f.addEventListener("change", filterProducts));
+    sortSelect.addEventListener("change", sortProducts);
+
+    // Default sort
+    sortProducts();
+  </script>
 </body>
 </html>
