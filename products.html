@@ -26,7 +26,8 @@
     }
 
     header img {
-      height: 50px;
+      height: 70px;
+      aspect-ratio: 1/1;
     }
 
     nav a {
@@ -45,12 +46,13 @@
       position: relative;
       width: 100%;
       aspect-ratio: 16 / 5;
-      background: url('images/products-hero.jpg') center/cover no-repeat;
+      background: url('images/products-hero-image.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #fff;
       text-align: center;
+      border-radius: 4px;
     }
 
     .hero-content {
@@ -83,6 +85,8 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
       height: fit-content;
+      position: sticky;
+      top: 0px;
     }
 
     aside h2 {
@@ -146,7 +150,7 @@
 
     .product-card img {
       width: 100%;
-      height: 200px;
+      height: auto;
       object-fit: cover;
     }
 
@@ -232,7 +236,7 @@
 
       <div class="products-grid" id="productsGrid">
         <div class="product-card" data-type="mosquito spray" data-price="12.99" data-name="Eco Mosquito Spray" data-featured="true">
-          <img src="images/product1.jpg" alt="Eco Mosquito Spray">
+          <img src="images/mosquito-spray.png" alt="Eco Mosquito Spray">
           <div class="product-info">
             <h3>Eco Mosquito Spray</h3>
             <p>Plant-based spray that keeps mosquitoes away naturally.</p>
@@ -241,7 +245,7 @@
         </div>
 
         <div class="product-card" data-type="tick lotion" data-price="14.99" data-name="Tick Shield Lotion">
-          <img src="images/product2.jpg" alt="Tick Shield Lotion">
+          <img src="images/tick-shield-lotion.png" alt="Tick Shield Lotion">
           <div class="product-info">
             <h3>Tick Shield Lotion</h3>
             <p>Eco-friendly lotion that protects against ticks.</p>
@@ -250,7 +254,7 @@
         </div>
 
         <div class="product-card" data-type="general band" data-price="8.99" data-name="Wearable Band" data-featured="true">
-          <img src="images/product3.jpg" alt="Wearable Band">
+          <img src="images/wearable-band.png" alt="Wearable Band">
           <div class="product-info">
             <h3>Wearable Band</h3>
             <p>Comfortable band infused with natural repellents.</p>
@@ -259,7 +263,7 @@
         </div>
 
         <div class="product-card" data-type="general net" data-price="19.99" data-name="Eco Bug Net">
-          <img src="images/product4.jpg" alt="Eco Bug Net">
+          <img src="images/bug-net.png" alt="Eco Bug Net">
           <div class="product-info">
             <h3>Eco Bug Net</h3>
             <p>Durable netting made from sustainable materials.</p>
@@ -268,7 +272,7 @@
         </div>
 
         <div class="product-card" data-type="general jacket" data-price="39.99" data-name="Bug Jacket">
-          <img src="images/product5.jpg" alt="Bug Jacket">
+          <img src="images/bug-jacket.png" alt="Bug Jacket">
           <div class="product-info">
             <h3>Bug Jacket</h3>
             <p>Protective eco-friendly fabric for outdoor adventures.</p>

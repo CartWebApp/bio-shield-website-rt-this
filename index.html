@@ -27,7 +27,8 @@
     }
 
     header img {
-      height: 50px;
+      height: 70px;
+      aspect-ratio: 1/1;
     }
 
     nav a {
@@ -46,7 +47,7 @@
       position: relative;
       width: 100%;
       aspect-ratio: 16 / 9;
-      background: url('images/hero-image.jpg') center/cover no-repeat;
+      background: url('images/hero-image.png') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -97,14 +98,15 @@
     }
 
     .box {
-      background: #fff;
+      background: #ffffff;
       padding: 2rem;
       margin-bottom: 2rem;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.05);
     }
 
     /* PRODUCTS */
+
     .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -116,6 +118,14 @@
       padding: 1.5rem;
       border-radius: 10px;
       text-align: center;
+    }
+
+    .product img {
+      max-width: 100%;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+      border-radius: 8px;
+      aspect-ratio: 1/1;
     }
 
     .product h3 {
@@ -147,7 +157,7 @@
     }
 
     .faq-question {
-      background: #e0f2f1;
+      background: #e0f2e1;
       padding: 1rem;
       border-radius: 5px;
       cursor: pointer;
@@ -192,26 +202,26 @@
   <!-- PRODUCTS -->
   <section>
     <h2>Our Products</h2>
-    <div class="box products">
+    <section class="box products">
       <div class="product">
-        <img src="images/logo.png" alt="Product Img 1">
-        <h3>Natural Spray</h3>
+        <img src="images/mosquito-spray.png" alt="Product Img 1">
+        <h3>Eco Mosquito Spray</h3>
         <p>Powerful repellent made with plant-based oils.</p>
         <p class="price">$12.99</p>
       </div>
       <div class="product">
-        <img src="images/logo.png" alt="Product Img 2">
+        <img src="images/wearable-band.png" alt="Product Img 2">
         <h3>Wearable Band</h3>
         <p>Repels insects with long-lasting eco-friendly formula.</p>
         <p class="price">$8.99</p>
       </div>
       <div class="product">
-        <img src="images/logo.png" alt="Product Img 3">
-        <h3>Family Pack</h3>
-        <p>A bundle designed for outdoor adventures.</p>
+        <img src="images/tick-shield-lotion.png" alt="Product Img 3">
+        <h3>Tick Shield Lotion</h3>
+        <p>Eco-friendly lotion that protects against ticks.</p>
         <p class="price">$29.99</p>
       </div>
-    </div>
+    </section>
   </section>
 
   <!-- BENEFITS -->
