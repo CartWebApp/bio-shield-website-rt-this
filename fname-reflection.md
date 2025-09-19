@@ -54,52 +54,31 @@ This produced the description you see. We were pleased with the result, and deci
 The product descriptions were generated as the page was created.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
---------
-
-
-
-
+# Log #
+Below is a document log of how we used ChatGPT to produce the website, and how we jumped in to change things
 
 ChatGPT produces the code for the home page.
-We edit descriptions and add in images. The “Hero Image” wasn’t fitting, so we manually went into the code to change its aspect ratio.
-Colors were perfect. For the most part, they were untouched.
-We did ask GPT to better section off parts.
-Manually went into the code to make it sematic
+- We edit descriptions and add in images. The “Hero Image” wasn’t fitting, so we manually went into the code to change its aspect ratio.
+- Colors were perfect. For the most part, they were untouched.
+- We did ask GPT to better section off parts.
+- Manually went into the code to make it sematic
 
 ChatGPT produces the products page
-Descriptions were weird, so we changed those.
-Inserted AI-Produced images (special thanks to firefly)
+- Descriptions were weird, so we changed those.
+- Inserted AI-Produced images (special thanks to Firefly)
+- Had GPT produce images for all the products
 
 ChatGPT produces the about page
-At this point, the colors and designs began growing inconsistent. We jumped in to make sure they were congruent across the site, since we knew asking it to fix them probably wouldn’t work.
+- At this point, the colors and designs began growing inconsistent. We jumped in to make sure they were congruent across the site, since we knew asking it to fix them probably wouldn’t work.
+- Added an image from online as the background
 
 ChatGPT produces the contact page
-Structure is perfect. We make up an email and a phone number
-We had to fix the consistency again.
+- Structure is perfect. We make up an email and a phone number
+- We had to fix the consistency again, changing colors of text and the submit button.
 
 Changes after everything
-Scaled up the logo in the top left corner
-Made sure nav links were equally spread out
+- Scaled up the logo in the top left corner
+- Made sure nav links were equally spread out and, when hovered over, had consistent designs
 
-
-Primarily, manual labor we had to do after having ChatGPT produce the site was making designs consistent among the pages and inserting images where they weren’t placed.
-
-ChatGPT- Used to add Logo is products
-
-
-ChatGPT- Used to scale hero image
-
-ChatGPT- Used to scale product images to a 1:1 aspect ratio
+# Conclusion #
+Our use of AI tools throughout this project demonstrates how using several AI tools together (e.g. one)
