@@ -81,4 +81,4 @@ Changes after everything
 - Made sure nav links were equally spread out and, when hovered over, had consistent designs
 
 # Conclusion #
-Our use of AI tools throughout this project demonstrates how using several AI tools together (e.g. one)
+Our use of AI tools throughout this project demonstrates how using several AI tools together can create a visually-appealing and cohesive website. However, solely using AI is an imperfect solution, as it lacks the ability to apply consistent design and often fails to 
