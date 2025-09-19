@@ -71,6 +71,7 @@ ChatGPT produces the products page
 ChatGPT produces the about page
 - At this point, the colors and designs began growing inconsistent. We jumped in to make sure they were congruent across the site, since we knew asking it to fix them probably wouldn’t work.
 - Added an image from online as the background
+- We discovered that the images scale with the size of the space they're allocated to have in the grid. This problem was most prominent when using the filter, which caused the only product shown to be super-sized and take up the entire grid, making an unpleasant singular card you'd have to scroll down to full read. To fix this, we searched how to scale HTML elements and discovered that setting max-width and max-height in the CSS to px sizes will keep the sizes consistent regardless of space.
 
 ChatGPT produces the contact page
 - Structure is perfect. We make up an email and a phone number
@@ -81,4 +82,4 @@ Changes after everything
 - Made sure nav links were equally spread out and, when hovered over, had consistent designs
 
 # Conclusion #
-Our use of AI tools throughout this project demonstrates how using several AI tools together can create a visually-appealing and cohesive website. However, solely using AI is an imperfect solution, as it lacks the ability to apply consistent design and often fails to 
+Our use of AI tools throughout this project demonstrates how using several AI tools together can create a visually-appealing and cohesive website. However, solely using AI is an imperfect solution, as when coding several pages for a website, it lacks the ability to apply consistent design, and when generating images, it struggles to maintain realistic design or create comprehensible text. The times we had to intervene and change code ourselves show that creators will have to possess prior knowledge about coding and perform some manual work to create a fully functional website.
