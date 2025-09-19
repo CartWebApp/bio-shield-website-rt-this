@@ -13,15 +13,16 @@ For example, when you only give it a few sentences to work off of the website ha
 
 In order to mold it more to our desires, we started a new chat and planned out this very long response (note we did revise this several times prior for more specifity) (also we attached an image of the logo):
 
-`"I would like you to write HTML code to make a website for this company. There will be four pages: the home page, products page, about page, and contact page. I have attached Bio Shield’s logo as a basis for the color scheme and page layout. Use Open Sans for the font.
-First, could you code the layout home page? Here is what I would like:`
+"I would like you to write HTML code to make a website for this company. There will be four pages: the home page, products page, about page, and contact page. I have attached Bio Shield’s logo as a basis for the color scheme and page layout. Use Open Sans for the font.
+First, could you code the layout home page? Here is what I would like:
 
     1. A top bar where users can navigate to the four aforementioned pages. The logo should be in the top left corner at all times in this bar.
     2. For the user to be immediately greeted with a “hero image” that spans across the screen. There will be a caption in the middle which is a short sentence about Bio Shield’s eco friendly insect repellents, and right below a button that leads to the products page
     3. As the user scrolls down there will be more banners of their insect repellent, main products being shown (with name, description, and cost), listing of benefits,
     quotes from users. Section the products, benefits, and quotes by encasing them in their own highlighted boxes.
-    4. Frequently asked questions at the very bottom 
-`Feel free to add anything more to the homepage beyond what has been listed if you feel it will assist with making a compelling home page."`
+    4. Frequently asked questions at the very bottom
+
+Feel free to add anything more to the homepage beyond what has been listed if you feel it will assist with making a compelling home page."
 
 
 
@@ -30,6 +31,8 @@ This input (the initial variant, but still had numbered instructions like these)
 After refining and adding more, it produced the website you see right now. From there, we moved straight to having it produce the other pages (in the same chat so we wouldn't lose the consistency of the design) with similarly formatted prompts. Each one, on the first try, created the pages also seen on the website (that means they were *really* good). However, it did gradually lose consistency after each page: by the third page, the tertiary-black color shifted into a grassy green, hovering over the navigation links switched from changing colors into underlining the text, and the size of the navigation bar became smaller. Rather than ask GPT to fix these, we decided to manually change the CSS ourselves: we did this when we hadn't learnt CSS basics yet, so trying to figure out how to change all of those features was kinda annoying and took a bit of time!
 
 To conclude, the AI coded basically all the website; we just jumped in to fix consistency and change some UI.
+
+***Post note: after taking advice from Lord Fast, there was one part we coded majorly by ourselves, being the pictures and profiles on the about us page. We learnt how to apply CSS to align pictures and text (kinda just copy pasting off the AI made CSS for the products grid)
 
 # Images #
 In total, we used three AI tools for generating images: Artlist, Firefly, and ChatGPT. 
@@ -61,17 +64,18 @@ ChatGPT produces the code for the home page.
 - We edit descriptions and add in images. The “Hero Image” wasn’t fitting, so we manually went into the code to change its aspect ratio.
 - Colors were perfect. For the most part, they were untouched.
 - We did ask GPT to better section off parts.
-- Manually went into the code to make it sematic
+- Manually went into the code to make it just a little more sematic
 
 ChatGPT produces the products page
 - Descriptions were weird, so we changed those.
 - Inserted AI-Produced images (special thanks to Firefly)
 - Had GPT produce images for all the products
+- We discovered that the images scale with the size of the space they're allocated to have in the grid. This problem was most prominent when using the filter, which caused the only product shown to be super-sized and take up the entire grid, making an unpleasant singular card you'd have to scroll down to full read. To fix this, we searched how to scale HTML elements and discovered that setting max-width and max-height in the CSS to px sizes will keep the sizes consistent regardless of space.
 
 ChatGPT produces the about page
 - At this point, the colors and designs began growing inconsistent. We jumped in to make sure they were congruent across the site, since we knew asking it to fix them probably wouldn’t work.
 - Added an image from online as the background
-- We discovered that the images scale with the size of the space they're allocated to have in the grid. This problem was most prominent when using the filter, which caused the only product shown to be super-sized and take up the entire grid, making an unpleasant singular card you'd have to scroll down to full read. To fix this, we searched how to scale HTML elements and discovered that setting max-width and max-height in the CSS to px sizes will keep the sizes consistent regardless of space.
+- After getting advice from the one and only Mr. Fast, he suggested to add pictures of the creators to the about us. As we didn't want to ask GPT to help us code that, we tried adding that ourselves... quite challenging to code. But we did it! Learnt how to align with CSS... also comes packaged with making a little bit of semantic code.
 
 ChatGPT produces the contact page
 - Structure is perfect. We make up an email and a phone number

@@ -27,7 +27,7 @@
 
     .navbar img {
       height: 70px;
-      aspect-ratio: 1/1;
+      aspect-ratio: 1/0.65;
     }
 
     nav a {
@@ -56,6 +56,36 @@
       font-size: 2.75rem;
       margin-bottom: 30px;
       color: #1a3c34;
+    }
+
+    .about-container #profile-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .about-container #profile {
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+      border-radius: 200px;
+      background: #f4f9f4;
+      padding: 1.5rem;
+    }
+
+    .about-container h2 {
+      text-align: center;
+    }
+
+    .about-container #together {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      border-radius: 8px;
     }
 
     .about-container p {
@@ -87,23 +117,30 @@
   <!-- About Section -->
   <main class="about-container">
     <h1>About Us</h1>
-    <p>
-      Bio Shield began with a simple vision: to create insect repellents that protect people while protecting the planet. 
-      Concerned about the harsh chemicals used in traditional repellents, our founders set out to develop safe, effective 
-      solutions rooted in sustainability. What started as a small project to craft a single eco-friendly repellent has 
-      blossomed into a full line of products trusted by families and adventurers alike.
-    </p>
-    <p>
-      Our philosophy is guided by a respect for nature and the people who enjoy it. Every Bio Shield product is designed 
-      with natural, responsibly sourced ingredients and environmentally friendly manufacturing practices. From repellents 
-      for mosquitoes and ticks to protective gear like nets and jackets, we’ve built our catalog around both safety 
-      and sustainability.
-    </p>
-    <p>
-      Today, Bio Shield is more than a company—it’s a community of innovators, outdoor lovers, and eco-conscious customers. 
-      We remain committed to our founding principle: that no one should have to choose between personal protection and the 
-      health of our planet.
-    </p>
+
+    <section id="profile-grid">
+      <div class="profile">
+        <img src="images/George.png" id="profile">
+        <h2>George Whitfield</h2>
+      </div>
+      <div class="profile">
+        <img src="images/Harold.png" id="profile">
+        <h2>Harold Pritchard</h2>
+      </div>
+    </section>
+
+      <section>
+        <p>Bio Shield began with a simple vision shared by two friends, George and Harold: to create insect repellents that protect people while protecting the planet. Disturbed by the harsh chemicals found in traditional repellents, George and Harold set out to develop safe, effective solutions rooted in sustainability. What started as their small project to craft a single eco-friendly repellent has blossomed into a full line of products trusted by families and adventurers alike.</p>
+
+      <p>Their philosophy has always been guided by a respect for nature and the people who enjoy it. Every Bio Shield product is designed with natural, responsibly sourced ingredients and environmentally friendly manufacturing practices. From repellents for mosquitoes and ticks to protective gear like nets and jackets, the catalog has grown around both safety and sustainability.</p>
+
+      <p>Today, Bio Shield is more than just a company—it’s a community of innovators, outdoor lovers, and eco-conscious customers. George and Harold’s vision lives on in every bottle, net, and jacket. And at the heart of it all remains their founding principle: no one should have to choose between personal protection and the health of our planet.</p>
+
+
+        
+      </section>
+
+    <img src="images/aboutustogether.png" id="together">
   </main>
 
   <!-- Footer -->
