@@ -67,6 +67,7 @@ ChatGPT produces the code for the home page.
 - Colors were perfect. For the most part, they were untouched.
 - We did ask GPT to better section off parts.
 - Manually went into the code to make it just a little more sematic
+- At the end, asked GPT to help with CSS that would make hero image fit across the screen. Culprit was the CSS for the sections, so added CSS to hero section that would make it ignore the sections' CSS.
 
 ChatGPT produces the products page
 - Descriptions were weird, so we changed those.
