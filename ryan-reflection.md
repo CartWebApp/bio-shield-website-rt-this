@@ -1,4 +1,4 @@
-Ryan Gip's reflection here --- Did not realize these were individual. I wrote this in a third person perspective.
+Did not realize these were individual. I wrote this in a third person perspective.
 
 Reflecting back on our work and the usage of AI tools, we overall tended to rely on AI for MANY elements, including almost all of the CSS that makes the website look as good as it does.
 However, we also jumped in when it was necessary to improve upon key details that AIs may have missed.
@@ -8,7 +8,7 @@ However, we also jumped in when it was necessary to improve upon key details tha
 For the production of the entire site, we solely used ChatGPT. We were originally planning to use the GitHub Co-pilot alongside it, however ChatGPT proved themselves far beyond proficient. When we asked it to create a home page, it produced EVERYTHING we asked it for. The caveat is that you have to be incredibly specific with what you want it to produce (you also have to know how to have concise writing).
 
 
-For example, when you only give it a few sentences to work off of the website happens to turn shoddy, buggy, straining to your eyes, or becomes incredibly disorganized in hierarchical structure. Here is an example of one of our first prompts, which quickly resulted in a flat neon-green website with contrasting text (Note he attached 4 images which included the website's logo and pictures from our competitor website):
+For example, when you only give it a few sentences to work off of the website happens to turn shoddy, buggy, straining to your eyes, or becomes incredibly disorganized in hierarchical structure. Here is an example of one of our first prompts submitted by Ta'rique, which quickly resulted in a flat neon-green website with contrasting text (Note that there were 4 images attached which included the website's logo and pictures from our competitor website):
 
 `"Generate a code for this website’s homepage. The homepage’s top ui will be similar to this ui. And have the color scheme similar to this image. The same image that is used for the color scheme is also the logo. Now make the front page’s hero image the same size as the image with the 2 people in the forest, but instead of the 2 individuals in the forest it’s this image instead. Now try to somewhat replicate the homepage from https://bens30.com/ for the website I gave you. This website is called 'Bio Shield'"`
 
