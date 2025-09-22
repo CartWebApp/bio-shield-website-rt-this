@@ -32,9 +32,9 @@ This input (the initial variant, but still had numbered instructions like these)
 
 After refining and adding more, it produced the website you see right now. From there, we moved straight to having it produce the other pages (in the same chat so we wouldn't lose the consistency of the design) with similarly formatted prompts. Each one, on the first try, created the pages also seen on the website (that means they were *really* good). However, it did gradually lose consistency after each page: by the third page, the tertiary-black color shifted into a grassy green, hovering over the navigation links switched from changing colors into underlining the text, and the size of the navigation bar became smaller. Rather than ask GPT to fix these, we decided to manually change the CSS ourselves: we did this when we hadn't learnt CSS basics yet, so trying to figure out how to change all of those features was kinda annoying and took a bit of time!
 
-To conclude, the AI coded basically all the website; we just jumped in to fix consistency and change some UI.
+There were also many post-changes where we realized the AI had made mistakes. Most of these, I fixed myself, including scaling of product windows, adding and formatting images of "the creators" to the about us page (thanks to advice from Lord Fast), and fixing bugs on the contact page's form. I fixed these by modifying the CSS and learning about aspect ratios, (max)height/width, those kinds of rules. and One post-edit change I used AI (ChatGPT) for was rescaling the size of the hero image on the home page, as I couldn't figure out the CSS issue with that (it was that the CSS for the section element was messing with the image's scaling).
 
-***Post note: after taking advice from Lord Fast, there was one part we coded majorly by ourselves, being the pictures and profiles on the about us page. We learnt how to apply CSS to align pictures and text (kinda just copy pasting off the AI made CSS for the products grid)
+To conclude, the AI coded basically all the website; we just jumped in to fix consistency, change some UI, and resolve bugs.
 
 # Images #
 In total, we used three AI tools for generating images: Artlist, Firefly, and ChatGPT. 
@@ -42,7 +42,7 @@ We hadn't planned to use GPT initially; we relied solely on Artlist and Firefly.
 
 Artlist only allowed five free trial uses, which derailed lots of my plans. The only time we used Artlist was to create the Bio Shield logo, which honestly looked really nice. It generated that logo on the first try, too, which was very surprising. The prompt we used for Artlist went something along the lines of, "Bio Shield is an Eco-Friendly insect repellent company. Generate a logo for their brand."
 
-Firefly generated the "hero images" you see on the home and products page. We also planned to use it for improving the logo and making products. While Firefly was dominant over other AIs in our ability to essentialy produce unlimited images, it also had a massive flaw: it mangles text horribly, and no matter what prompts you feed it, the resulting images seem to defy what you want. But if it's not asked to create anything with text, it's alright: it makes humans quickly.
+Firefly generated the "hero images" you see on the home and products page. We also planned to use it for improving the logo and making products. While Firefly was dominant over other AIs in our ability to essentially produce unlimited images, it also had a massive flaw: it mangles text horribly, and no matter what prompts you feed it, the resulting images seem to defy what you want. But if it's not asked to create anything with text, it's alright: it makes humans quickly.
 
 Growing desperate, we turned to ChatGPT, asking it to slap the Bio Shield logo onto an unlabelled lotion bottle. *Turns out, ChatGPT is very, very good at creating images.* We used ChatGPT to create every product seen by taking pictures of products online and telling the AI to slap the Bio Shield logo ontop instead.
 
