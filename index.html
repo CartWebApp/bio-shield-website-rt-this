@@ -46,15 +46,19 @@
     .hero {
       position: relative;
       width: 100%;
-      aspect-ratio: 16 / 9;
-      background: url('images/hero-image.png') center/cover no-repeat;
+      aspect-ratio: 16/9;
+      background: #000 url('images/hero-image.png') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #fff;
       text-align: center;
-      border-radius: 4px;
+      border-radius: 0;
+      padding: 0;         /* remove inherited section padding */
+      max-width: none;    /* remove 1200px constraint */
+      margin: 0;          /* remove centering margin */
     }
+    
 
     .hero-content {
       background: rgba(0, 0, 0, 0.5);

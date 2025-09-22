@@ -1,3 +1,5 @@
+Ryan Gip's reflection here --- Did not realize these were individual. I wrote this in a third person perspective.
+
 Reflecting back on our work and the usage of AI tools, we overall tended to rely on AI for MANY elements, including almost all of the CSS that makes the website look as good as it does.
 However, we also jumped in when it was necessary to improve upon key details that AIs may have missed.
 
